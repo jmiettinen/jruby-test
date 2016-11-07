@@ -23,3 +23,5 @@ SimpleClassImpl/5
 BrokenClassImpl/5
 BrokenClassImpl/5
 ```
+
+This all can be accomplish by running `./run.sh`
