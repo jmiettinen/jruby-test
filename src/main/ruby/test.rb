@@ -1,8 +1,8 @@
 # encoding: utf-8
 
 [
-Java::fi.relex::SimpleClass.instance.set_value(5),
-Java::fi.relex::SimpleClass.instance.setValue(5)
+Java::fi.relex::SimpleClass.getInstance().set_value(5),
+Java::fi.relex::SimpleClass.getInstance().setValue(5)
 ].each { |v| puts v.to_s }
 
 [
