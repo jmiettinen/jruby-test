@@ -1,6 +1,6 @@
 package fi.relex;
 
-public class SimpleClassImpl extends SimpleClass {
+class BrokenClassImpl extends BrokenClass {
 
     private long value;
 
@@ -10,8 +10,8 @@ public class SimpleClassImpl extends SimpleClass {
     }
 
     @Override
-    public SimpleClass setValue(long value) {
-        this.value = value;
+    public BrokenClass setValue(long val) {
+        this.value = val;
         return this;
     }
 }

@@ -6,6 +6,7 @@ public abstract class SimpleClass {
         return new SimpleClassImpl();
     }
 
+    public abstract long getValue();
     public abstract SimpleClass setValue(long value);
 
 }
