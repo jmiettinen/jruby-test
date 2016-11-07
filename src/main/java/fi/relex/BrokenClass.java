@@ -2,11 +2,14 @@ package fi.relex;
 
 public abstract class BrokenClass {
 
-    public BrokenClass getBrokenInstance() {
-        return new BrokenClassImpl();
+    public static class Builder extends BrokenClassImpl.Builder {}
+
+    public static Builder builder() {
+        return new Builder();
     }
 
     public abstract long getValue();
-    public abstract BrokenClass setValue(long val);
+
+    public String toString() { return getClass().getSimpleName() + "/" + String.valueOf(getValue()); }
 
 }

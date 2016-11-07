@@ -45,6 +45,7 @@
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>2.5</version>
                 <configuration>
+                    <finalName>jruby-test</finalName>
                     <archive>
                         <manifest>
                             <mainClass>org.jruby.Main</mainClass>

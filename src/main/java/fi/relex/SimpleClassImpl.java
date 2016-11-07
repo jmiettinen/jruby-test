@@ -2,16 +2,30 @@ package fi.relex;
 
 public class SimpleClassImpl extends SimpleClass {
 
-    private long value;
+    private final long value;
+
+    public SimpleClassImpl(long value) {
+        this.value = value;
+    }
 
     @Override
     public long getValue() {
         return value;
     }
 
-    @Override
-    public SimpleClass setValue(long value) {
-        this.value = value;
-        return this;
+    public static class Builder {
+
+        private long value;
+
+        public Builder setValue(long value) {
+            this.value = value;
+            return this;
+        }
+
+        public SimpleClassImpl build() {
+            return new SimpleClassImpl(value);
+        }
+
     }
+
 }

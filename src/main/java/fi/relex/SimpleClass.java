@@ -2,11 +2,12 @@ package fi.relex;
 
 public abstract class SimpleClass {
 
-    public static SimpleClass getInstance() {
-        return new SimpleClassImpl();
-    }
+    public static class Builder extends SimpleClassImpl.Builder {}
+
+    public static Builder builder() { return new Builder(); }
 
     public abstract long getValue();
-    public abstract SimpleClass setValue(long value);
+
+    public String toString() { return getClass().getSimpleName() + "/" + String.valueOf(getValue()); }
 
 }

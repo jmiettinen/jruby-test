@@ -2,16 +2,28 @@ package fi.relex;
 
 class BrokenClassImpl extends BrokenClass {
 
-    private long value;
+    private final long value;
+    BrokenClassImpl(long value) {
+        this.value = value;
+    }
 
     @Override
     public long getValue() {
         return value;
     }
 
-    @Override
-    public BrokenClass setValue(long val) {
-        this.value = val;
-        return this;
+    static class Builder {
+
+        private long value;
+
+        public Builder setValue(long value) {
+            this.value = value;
+            return this;
+        }
+
+        public BrokenClassImpl build() {
+            return new BrokenClassImpl(value);
+        }
+
     }
 }
